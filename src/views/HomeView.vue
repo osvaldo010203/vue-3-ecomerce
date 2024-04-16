@@ -1,9 +1,13 @@
+<!--import { RouterView } from 'vue-router';   -->
+<!--import { Product } from '../model/types';  -->
+
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+
+import ProductList from '@/components/ProductList.vue';
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+      <ProductList/>
   </main>
 </template>

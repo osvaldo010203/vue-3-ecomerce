@@ -1,15 +1,12 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <v-card>
+  <v-card-title>
+    Acerca de esta tienda
+  </v-card-title>
+  <v-card-text>
+   <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias deserunt veritatis perspiciatis accusamus, numquam cumque?</p>
+    <p> Explicabo consequuntur error accusantium. Ex sint ullam ad porro dolores quidem consectetur nam assumenda nihil! </p>
+  </v-card-text>
+  </v-card>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
