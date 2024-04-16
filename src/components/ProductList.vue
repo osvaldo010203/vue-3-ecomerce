@@ -8,14 +8,14 @@ import type { CartDetail,Product } from '../model/types';
         ProductCard,
         Cart
     },
+    props: ['details'],
     data() {
         return{
             products: <Array<Product>> [
                 {name:'Silla',price:56,id:5},
                 {name:'Monitor',price:450,id:7},
                 {name:'Microfono',price:120,id:12}
-            ],
-            details: <Array<CartDetail>>[]
+            ]
         }
     },
     methods: {

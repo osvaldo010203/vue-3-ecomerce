@@ -1,13 +1,21 @@
 <!--import { RouterView } from 'vue-router';   -->
 <!--import { Product } from '../model/types';  -->
 
-<script setup lang="ts">
+<script  lang="ts">
 
 import ProductList from '@/components/ProductList.vue';
+
+export default {
+  components:{
+    ProductList
+  },
+  props:['details']
+}
+
 </script>
 
 <template>
   <main>
-      <ProductList/>
+      <ProductList :details="details"/>
   </main>
 </template>
