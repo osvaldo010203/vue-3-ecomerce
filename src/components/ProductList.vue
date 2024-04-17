@@ -20,18 +20,7 @@ import type { CartDetail,Product } from '../model/types';
     },
     methods: {
         onProductAdded(productId: number){
-            const detailFound = this.details.find(d=> d.productId === productId);
-
-            if(detailFound){
-                detailFound.quantity +=1;
-
-            }else{
-                this.details.push({
-                productId,
-                quantity:1
-
-                 });
-            }
+           
 
            
         }
