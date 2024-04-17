@@ -1,7 +1,7 @@
 <script  lang="ts">
 import type { PropType } from 'vue';
 import type { Product } from '../model/types';
-import vue from '@vitejs/plugin-vue';
+import { useCartStore } from '@/stores/cart';
   export default {
     props: {
         product: {
@@ -9,11 +9,10 @@ import vue from '@vitejs/plugin-vue';
                 required:true
         }
     },
-    emits: ['addProduct'],
     methods:{
       onAddButtonClick(){
-        //console.log('Agregando producto'+this.product.id);
-        this.$emit('addProduct');
+           const cartStore =useCartStore();
+           cartStore.addProduct(this.product.id);
       }
     }
   }

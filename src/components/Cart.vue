@@ -1,14 +1,17 @@
 <script lang="ts">
 import type { PropType } from 'vue';
-import type { CartDetail } from './types';
-import { Product } from './types';
+import type { CartDetail} from '@/model/types';
+import { useCartStore } from '@/stores/cart';
+import { computed } from 'vue';
+
+
 export default{
-    props:{
-        details: {
-            type:Object as PropType<Array<CartDetail>>,
-            required:true
-        }        
+ computed:{
+    details(){
+        const cartStore = useCartStore();
+        return cartStore.details;
     }
+ }
 }
 </script>
 

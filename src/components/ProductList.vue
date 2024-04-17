@@ -3,6 +3,8 @@ import ProductCard from './ProductCard.vue';
 import Cart from './Cart.vue';
 //import type { Product } from './types';
 import type { CartDetail,Product } from '../model/types';
+
+
   export default {
     components: { 
         ProductCard,
@@ -11,7 +13,7 @@ import type { CartDetail,Product } from '../model/types';
     props: ['details'],
     data() {
         return{
-            products: <Array<Product>> [
+            products: <Array<Product>>[
                 {name:'Silla',price:56,id:5},
                 {name:'Monitor',price:450,id:7},
                 {name:'Microfono',price:120,id:12}
@@ -20,9 +22,7 @@ import type { CartDetail,Product } from '../model/types';
     },
     methods: {
         onProductAdded(productId: number){
-           
-
-           
+        
         }
     }
   }
@@ -39,6 +39,6 @@ import type { CartDetail,Product } from '../model/types';
 
         </v-col>
         </v-row>
-        <Cart :details="details" /> 
+        <Cart details!/> 
     
 </template>
